@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anu - AI Physio Assistant</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏥 Hassy - AI Physio Assistant</h1>
+            <p>Your virtual physiotherapy consultant</p>
+        </div>
+
+        <!-- Login Section -->
+        <div id="loginSection" class="section">
+            <h2>Welcome! Please sign in</h2>
+            <div class="form-group">
+                <input type="email" id="emailInput" placeholder="Enter your email" />
+                <button onclick="login()">Start Chat</button>
+            </div>
+        </div>
+
+        <!-- Chat Section -->
+        <div id="chatSection" class="section hidden">
+            <div class="user-info">
+                <span id="userEmail"></span>
+                <button onclick="logout()" class="logout-btn">Logout</button>
+            </div>
+
+            <div id="chatContainer" class="chat-container">
+                <!-- Messages will appear here -->
+            </div>
+
+            <div class="input-section">
+                <input 
+                    type="text" 
+                    id="messageInput" 
+                    placeholder="Type your message..."
+                    onkeypress="handleKeyPress(event)"
+                />
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/chat.js"></script>
+</body>
+</html>

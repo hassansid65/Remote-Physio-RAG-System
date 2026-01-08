@@ -1,0 +1,24 @@
+fastapi==0.104.1
+uvicorn==0.24.0
+python-multipart==0.0.6
+python-dotenv==1.0.0
+pydantic>=2.8.0
+pydantic-settings>=2.4.0
+
+# AI/ML Libraries
+transformers>=4.40.0
+torch==2.6.0+cpu
+google-generativeai==0.3.1
+
+# Vector Database
+weaviate-client==3.25.3
+
+
+# Database
+pymongo==4.6.0
+
+# Email validation
+email-validator==2.1.0
+
+# Encoding detection
+chardet==5.2.0

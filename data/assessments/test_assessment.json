@@ -1,0 +1,27 @@
+[
+  {
+    "content": "Shoulder pendulum exercise helps relieve stiffness and increase mobility.",
+    "type": "exercise",
+    "category": "shoulder"
+  },
+  {
+    "content": "Lumbar stabilization exercises strengthen the core and reduce lower back pain.",
+    "type": "exercise",
+    "category": "back"
+  },
+  {
+    "content": "Lumbopelvic stability exercises improve posture and core control.",
+    "type": "exercise",
+    "category": "core"
+  },
+  {
+    "content": "Hamstring stretches help improve flexibility and reduce strain on the lower back.",
+    "type": "exercise",
+    "category": "legs"
+  },
+  {
+    "content": "Neck retraction exercises relieve tension and improve neck alignment.",
+    "type": "exercise",
+    "category": "neck"
+  }
+]

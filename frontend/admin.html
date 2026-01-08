@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Physio Chatbot</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 Admin Panel</h1>
+            <p>Upload Assessment & Exercise Data</p>
+        </div>
+
+        <div class="admin-section">
+            <!-- Assessment Upload -->
+            <div class="upload-card">
+                <h2>📋 Upload Assessment Data</h2>
+                <div class="form-group">
+                    <label>Category/Condition Name:</label>
+                    <input type="text" id="assessmentCategory" placeholder="e.g., Knee Pain, Back Pain" />
+                </div>
+                <div class="form-group">
+                    <label>Upload File (JSON, CSV, or TXT):</label>
+                    <input type="file" id="assessmentFile" accept=".json,.csv,.txt" />
+                </div>
+                <div class="form-group">
+                    <label>Or Enter Text Directly:</label>
+                    <textarea id="assessmentText" rows="6" placeholder="Enter assessment data..."></textarea>
+                </div>
+                <button onclick="uploadAssessment()" class="upload-btn">Upload Assessment</button>
+                <div id="assessmentStatus" class="status-message"></div>
+            </div>
+
+            <!-- Exercise Upload -->
+            <div class="upload-card">
+                <h2>💪 Upload Exercise Data</h2>
+                <div class="form-group">
+                    <label>Category/Condition Name:</label>
+                    <input type="text" id="exerciseCategory" placeholder="e.g., Knee Strengthening" />
+                </div>
+                <div class="form-group">
+                    <label>Upload File (JSON, CSV, or TXT):</label>
+                    <input type="file" id="exerciseFile" accept=".json,.csv,.txt" />
+                </div>
+                <div class="form-group">
+                    <label>Or Enter Text Directly:</label>
+                    <textarea id="exerciseText" rows="6" placeholder="Enter exercise data..."></textarea>
+                </div>
+                <button onclick="uploadExercise()" class="upload-btn">Upload Exercise</button>
+                <div id="exerciseStatus" class="status-message"></div>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h3>ℹ️ Upload Instructions</h3>
+            <ul>
+                <li><strong>JSON Format:</strong> {"content": "your assessment/exercise description"} or array of objects</li>
+                <li><strong>CSV Format:</strong> Must have a "content" column with the data</li>
+                <li><strong>TXT Format:</strong> Plain text will be uploaded as a single document</li>
+                <li><strong>Direct Text:</strong> Type or paste content directly into the text area</li>
+                <li>All data will be embedded using BioBERT and stored in Weaviate</li>
+            </ul>
+        </div>
+
+        <div class="nav-link">
+            <a href="index.html">← Back to Chat Interface</a>
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
